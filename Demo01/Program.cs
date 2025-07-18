@@ -39,13 +39,27 @@
             //Console.WriteLine(E01.GetName());
             //Console.WriteLine(E01.GetSalary());
 
-            Employee E02 = new(2, "Mahmoud", 20000);
-            Console.WriteLine(E02.GetId());
-            Console.WriteLine(E02.GetName());
-            Console.WriteLine(E02.GetSalary());
+            //Employee E02 = new(2, "Mahmoud", 20000);
+            //Console.WriteLine(E02.GetId());
+            //Console.WriteLine(E02.GetName());
+            //Console.WriteLine(E02.GetSalary());
 
-            Console.WriteLine(E02);
+            //Console.WriteLine(E02);
 
+            #endregion
+
+            #region Encapsulation Using Property [Full][Automatic]
+            Employee E03 = new();
+
+            E03.Id = 3;
+            E03.Name = "Fouad";
+            E03.Salary = 10000;
+            E03.Address = "Cairo";
+
+            Console.WriteLine(E03.Id); //3
+            Console.WriteLine(E03.Name); //Fouad
+            Console.WriteLine(E03.Salary); //10000
+            Console.WriteLine(E03.Address); //Cairo
             #endregion
         }
     }
