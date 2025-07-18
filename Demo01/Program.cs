@@ -49,17 +49,39 @@
             #endregion
 
             #region Encapsulation Using Property [Full][Automatic]
-            Employee E03 = new();
+            //Employee E03 = new();
 
-            E03.Id = 3;
-            E03.Name = "Fouad";
-            E03.Salary = 10000;
-            E03.Address = "Cairo";
+            //E03.Id = 3;
+            //E03.Name = "Fouad";
+            //E03.Salary = 10000;
+            //E03.Address = "Cairo";
 
-            Console.WriteLine(E03.Id); //3
-            Console.WriteLine(E03.Name); //Fouad
-            Console.WriteLine(E03.Salary); //10000
-            Console.WriteLine(E03.Address); //Cairo
+            //Console.WriteLine(E03.Id); //3
+            //Console.WriteLine(E03.Name); //Fouad
+            //Console.WriteLine(E03.Salary); //10000
+            //Console.WriteLine(E03.Address); //Cairo
+            #endregion
+
+            #region Encapsulation Using Property Indexer
+            PhoneBook phoneBook01 = new PhoneBook(3);
+
+            phoneBook01.AddPerson("Hussein", 123, 0);
+            phoneBook01.AddPerson("Mahmoud", 456, 1);
+            phoneBook01.AddPerson("Fouad", 789, 2);
+
+            Console.WriteLine(phoneBook01.GetNumber("Mahmoud")); //456
+
+            phoneBook01.UpdateNumber("Fouad", 10);
+            Console.WriteLine(phoneBook01.GetNumber("Fouad")); //10
+
+
+
+            phoneBook01["Hussein"] = 777;
+            Console.WriteLine(phoneBook01["Hussein"]); //777
+
+            phoneBook01[456] = "Mahmoud2";
+            Console.WriteLine(phoneBook01[456]); //Mahmoud2
+
             #endregion
         }
     }
