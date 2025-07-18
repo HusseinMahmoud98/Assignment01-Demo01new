@@ -63,24 +63,34 @@
             #endregion
 
             #region Encapsulation Using Property Indexer
-            PhoneBook phoneBook01 = new PhoneBook(3);
+            //PhoneBook phoneBook01 = new PhoneBook(3);
 
-            phoneBook01.AddPerson("Hussein", 123, 0);
-            phoneBook01.AddPerson("Mahmoud", 456, 1);
-            phoneBook01.AddPerson("Fouad", 789, 2);
+            //phoneBook01.AddPerson("Hussein", 123, 0);
+            //phoneBook01.AddPerson("Mahmoud", 456, 1);
+            //phoneBook01.AddPerson("Fouad", 789, 2);
 
-            Console.WriteLine(phoneBook01.GetNumber("Mahmoud")); //456
+            //Console.WriteLine(phoneBook01.GetNumber("Mahmoud")); //456
 
-            phoneBook01.UpdateNumber("Fouad", 10);
-            Console.WriteLine(phoneBook01.GetNumber("Fouad")); //10
+            //phoneBook01.UpdateNumber("Fouad", 10);
+            //Console.WriteLine(phoneBook01.GetNumber("Fouad")); //10
 
 
 
-            phoneBook01["Hussein"] = 777;
-            Console.WriteLine(phoneBook01["Hussein"]); //777
+            //phoneBook01["Hussein"] = 777;
+            //Console.WriteLine(phoneBook01["Hussein"]); //777
 
-            phoneBook01[456] = "Mahmoud2";
-            Console.WriteLine(phoneBook01[456]); //Mahmoud2
+            //phoneBook01[456] = "Mahmoud2";
+            //Console.WriteLine(phoneBook01[456]); //Mahmoud2
+
+            #endregion
+
+            #region Class
+            Car C01 = new Car(123, 320, "BMW");
+
+            Console.WriteLine(C01.Id); //123
+            Console.WriteLine(C01.Model); //BMW
+            Console.WriteLine(C01.Speed); //320
+            Console.WriteLine(C01); //Id: 123 ::: Speed: 320 ::: Model: BMW
 
             #endregion
         }
